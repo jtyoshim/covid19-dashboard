@@ -9,11 +9,14 @@ services:
     image: 'covid19_dashboard'
     container_name: 'covid19_dashboard'
     volumes:
-        - './dashboard'
+        - './dashboard:/app/dashboard'
     ports:
         - '8050:8050'
     networks:
         - 'dashboard'
+
+volumes:
+  dashboard:
 
 networks:
   dashboard:
