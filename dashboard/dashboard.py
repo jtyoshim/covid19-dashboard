@@ -11,11 +11,12 @@ import folium
 from datetime import datetime as dt
 import datetime
 import math
+import os
 pd.set_option('display.max_columns',50)
 
 # external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
-token = 'pk.eyJ1IjoianR5b3NoaW0iLCJhIjoiY2s5NmR0ZWJoMGpqazNucDJrY3EyOHVjdiJ9.l_asidm_Bb2M6F1KZnNBug'
+token = os.environ['MAPBOX_TOKEN']
 
 app = dash.Dash(__name__)
 colors = {
